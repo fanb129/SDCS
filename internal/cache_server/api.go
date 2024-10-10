@@ -106,9 +106,9 @@ func (mc *MemoryCache) handelDelete(response http.ResponseWriter, request *http.
 	} else {
 		// 存储在其他节点，进行rpc调用
 		log.Printf("forward to node %d : %s", idx, mc.config.Nodes[idx])
-		//if mc.grpcCli[idx] == nil {
-		//	mc.startRpcClient()
-		//}
+		if mc.grpcCli[idx] == nil {
+			mc.startRpcClient()
+		}
 		ctx, cancelFunc := context.WithTimeout(context.Background(), time.Second*3)
 		defer cancelFunc()
 		deleteRes, err := mc.grpcCli[idx].Delete(ctx, &proto.DeleteRequest{Key: key})
