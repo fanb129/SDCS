@@ -23,10 +23,3 @@ services:
     command: ["/root/sdcs", "-nodes=node0:8888,node1:8888,node2:8888", "-node_id=2"]
     ports:
       - "9529:8080"
-
-#  docker-compose up
-#  docker-compose up -d
-#  docker-compose stop
-#  docker-compose down
-#  docker-compose down -v
-#  docker-compose restart
