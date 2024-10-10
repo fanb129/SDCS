@@ -1,0 +1,32 @@
+version: "3"
+services:
+  node0:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+    command: ["/root/sdcs", "-nodes=node0:8888,node1:8888,node2:8888", "-node_id=0"]
+    ports:
+      - "9527:8080"
+
+  node1:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+    command: ["/root/sdcs", "-nodes=node0:8888,node1:8888,node2:8888", "-node_id=1"]
+    ports:
+      - "9528:8080"
+
+  node2:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+    command: ["/root/sdcs", "-nodes=node0:8888,node1:8888,node2:8888", "-node_id=2"]
+    ports:
+      - "9529:8080"
+
+#  docker-compose up
+#  docker-compose up -d
+#  docker-compose stop
+#  docker-compose down
+#  docker-compose down -v
+#  docker-compose restart
