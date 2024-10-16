@@ -1,7 +1,9 @@
 # SDCS
 SDCS: Simple Distributed Cache System
 
-实验报告：[docs/report.md](docs/report.md)
+实验报告：
+- md：[docs/report.md](docs/report.md)
+- pdf：[docs/report.pdf](docs/report.pdf)
 
 ## 一、本地运行
 ```shell
