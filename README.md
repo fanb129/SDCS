@@ -1,6 +1,8 @@
 # SDCS
 SDCS: Simple Distributed Cache System
 
+电子科技大学研究生课程《分布式系统》实验大作业
+
 实验报告：
 - md：[docs/report.md](docs/report.md)
 - pdf：[docs/report.pdf](docs/report.pdf)
